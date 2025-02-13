@@ -11,27 +11,26 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
-    "@types/js-cookie": "^3.0.6",
-    "axios": "^1.6.7",
-    "date-fns": "^2.30.0",
-    "framer-motion": "^12.4.1",
-    "js-cookie": "^3.0.5",
+    "date-fns": "^3.3.1",
+    "framer-motion": "^11.0.3",
+    "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
     "next": "14.1.0",
-    "next-auth": "^4.24.11",
-    "openai": "^4.83.0",
+    "next-auth": "^4.24.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.54.2",
-    "react-hot-toast": "^2.4.1"
+    "react-hook-form": "^7.50.0",
+    "react-hot-toast": "^2.4.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@types/node": "20.17.18",
-    "@types/react": "18.3.18",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
     "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.8",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
-    "typescript": "5.7.3"
+    "typescript": "^5.3.3"
   }
 }
