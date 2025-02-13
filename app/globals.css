@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* العناوين الرئيسية */
+  h1 {
+    @apply font-noto-kufi font-bold;
+  }
+
+  /* العناوين الفرعية */
+  h2, h3 {
+    @apply font-cairo font-semibold;
+  }
+
+  /* النصوص الرئيسية */
+  body {
+    @apply font-tajawal text-base;
+  }
+
+  /* الأزرار */
+  button {
+    @apply font-ibm-plex font-medium;
+  }
+}
+
+@layer components {
+  /* أنماط مخصصة للعناصر المختلفة */
+  .hero-title {
+    @apply font-noto-kufi font-bold text-4xl md:text-5xl;
+  }
+
+  .section-title {
+    @apply font-cairo font-bold text-2xl md:text-3xl;
+  }
+
+  .card-title {
+    @apply font-cairo font-semibold text-xl;
+  }
+
+  .nav-link {
+    @apply font-tajawal font-medium;
+  }
+
+  .feature-title {
+    @apply font-cairo font-semibold;
+  }
+
+  .price-text {
+    @apply font-ibm-plex font-bold;
+  }
+
+  .review-text {
+    @apply font-tajawal leading-relaxed;
+  }
+
+  .form-label {
+    @apply font-cairo font-medium;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --primary: #1E40AF;
+  --primary-dark: #1E3A8A;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+/* Add custom styles here */ 

@@ -1,0 +1,15 @@
+# منع عرض محتويات المجلدات
+Options -Indexes
+
+# إعادة توجيه الطلبات إلى Node.js
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/node_app
+RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]
+
+# تفعيل HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# تعيين رأس الخادم الوكيل
+ProxyRequests Off
+ProxyPreserveHost On 

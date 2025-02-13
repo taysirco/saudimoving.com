@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+<<<<<<< HEAD
+=======
+# Disallow admin routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+
+# Sitemaps
+>>>>>>> 837b09b (Initial commit: Project setup with Next.js and MongoDB)
+Sitemap: https://saudiamoving.com/sitemap.xml 
