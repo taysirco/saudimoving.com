@@ -1,7 +1,4 @@
 import NextAuth from 'next-auth'
-<<<<<<< HEAD
-import { authOptions } from '@/lib/auth-config'
-=======
 import CredentialsProvider from 'next-auth/providers/credentials'
 
 export const authOptions = {
@@ -19,15 +16,15 @@ export const authOptions = {
             return null
           }
 
-          // التحقق من صحة بيانات الدخول - بدون الحاجة لقاعدة البيانات
+          // Updated credentials check
           if (
-            credentials.username.trim() === 'adssaudimoving' &&
-            credentials.password.trim() === 'ABMabm2122'
+            credentials.username.trim() === 'saudi1' &&
+            credentials.password.trim() === 'zzxx2122'
           ) {
             return {
               id: '1',
-              name: 'Saudi Moving Ads',
-              email: 'ads@saudimoving.sa',
+              name: 'Saudi Moving Admin',
+              email: 'admin@saudimoving.sa',
               role: 'admin'
             }
           }
@@ -64,7 +61,6 @@ export const authOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET
 }
->>>>>>> 837b09b (Initial commit: Project setup with Next.js and MongoDB)
 
 const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST } 

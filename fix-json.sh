@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Create a clean package.json
+cat > package.json << 'EOL'
 {
   "name": "saudiamoving.com",
   "version": "0.1.0",
@@ -35,3 +39,16 @@
     "typescript": "5.7.3"
   }
 }
+EOL
+
+# Remove any BOM or hidden characters
+tr -d '\r' < package.json > package.json.clean
+mv package.json.clean package.json
+
+# Validate JSON
+node -e "JSON.parse(require('fs').readFileSync('package.json'))"
+
+# Commit and push
+git add package.json
+git commit -m "Fix package.json format"
+git push origin main 
