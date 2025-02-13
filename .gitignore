@@ -46,4 +46,3 @@ next-env.d.ts
 # Generated files
 public/uploads/*
 !public/uploads/.gitkeep
-.next
